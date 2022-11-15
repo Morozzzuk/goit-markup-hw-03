@@ -9,8 +9,22 @@
   --border-color: #eeeeee;
   --info-color: rgba(255, 255, 255, 0.6);
 
-  /* --main-font: 'Roboto', sans-serif;
-  --secondary-font: 'Raleway', sans-serif; */
+  --main-margin: 94px;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+ul {
+  margin: 0px;
+}
+img {
+  display: block;
 }
 body {
   color: var(--primary-text-color);
@@ -23,7 +37,14 @@ body {
   letter-spacing: 0.03em;
 }
 /* -------- universal classes ------------*/
+.container {
+  width: 1200px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
 .list {
+  margin: 0px;
+  padding: 0px;
   list-style: none;
 }
 .nav-link,
@@ -39,6 +60,7 @@ body {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+  padding-bottom: 50px;
 }
 .feature-title {
   font-size: 14px;
@@ -62,6 +84,7 @@ body {
 /* --------- Header ----------*/
 .header {
   background: var(--main-background-colorbackground-color);
+  margin-bottom: 21px;
 }
 .logo,
 .logfoot {
@@ -72,6 +95,14 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+}
+.logo {
+  display: block;
+  padding: 26px 0 24px 0;
+}
+.logfoot {
+  display: block;
+  padding: 38px 0 20px 0;
 }
 .logo-part {
   color: var(--primary-text-color);
@@ -99,6 +130,8 @@ body {
 /* ------- Hero -------- */
 .hero {
   background-color: var(--secondary-background-color);
+  padding: 200px 0;
+  margin-bottom: var(--main-margin);
 }
 .hero-title {
   color: var(--secondary-text-color);
@@ -108,6 +141,11 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 696px;
 }
 .hero-btn {
   color: var(--secondary-text-color);
@@ -117,12 +155,33 @@ body {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
 }
+/* ------- Work -------- */
+.work {
+  margin-bottom: 114px;
+  background: grey;
+}
+
 /* -------- Features --------------- */
+.features {
+  margin-bottom: var(--main-margin);
+  background: yellow;
+}
 .feature-text {
   color: var(--text-color);
 }
 /* -------- Command ------------------ */
+.command {
+  margin-bottom: var(--main-margin);
+  background: tomato;
+}
+.command-title {
+  padding: 94px 0 50px 0;
+}
 .command-member {
   font-weight: 500;
   font-size: 16px;
