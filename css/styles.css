@@ -9,7 +9,7 @@
   --border-color: #eeeeee;
   --info-color: rgba(255, 255, 255, 0.6);
 
-  --main-margin: 94px;
+  --main-padding: 94px;
 }
 p,
 h1,
@@ -84,7 +84,6 @@ body {
 /* --------- Header ----------*/
 .header {
   background: var(--main-background-colorbackground-color);
-  margin-bottom: 21px;
 }
 .logo,
 .logfoot {
@@ -98,11 +97,7 @@ body {
 }
 .logo {
   display: block;
-  padding: 26px 0 24px 0;
-}
-.logfoot {
-  display: block;
-  padding: 38px 0 20px 0;
+  padding: 24px 0 25px 0;
 }
 .logo-part {
   color: var(--primary-text-color);
@@ -131,7 +126,6 @@ body {
 .hero {
   background-color: var(--secondary-background-color);
   padding: 200px 0;
-  margin-bottom: var(--main-margin);
 }
 .hero-title {
   color: var(--secondary-text-color);
@@ -144,8 +138,8 @@ body {
 
   display: block;
   margin: 0 auto;
-  margin-bottom: 30px;
   max-width: 696px;
+  padding-bottom: 30px;
 }
 .hero-btn {
   color: var(--secondary-text-color);
@@ -162,13 +156,13 @@ body {
 }
 /* ------- Work -------- */
 .work {
-  margin-bottom: 114px;
+  padding-bottom: var(--main-padding);
   background: grey;
 }
 
 /* -------- Features --------------- */
 .features {
-  margin-bottom: var(--main-margin);
+  padding: var(--main-padding) 0;
   background: yellow;
 }
 .feature-text {
@@ -176,7 +170,7 @@ body {
 }
 /* -------- Command ------------------ */
 .command {
-  margin-bottom: var(--main-margin);
+  padding-bottom: var(--main-padding);
   background: tomato;
 }
 .command-title {
@@ -218,8 +212,13 @@ body {
 .footer {
   background: var(--secondary-background-color);
 }
+.logfoot {
+  display: block;
+  padding: 60px 0 20px 0;
+}
 .address {
   font-style: normal;
+  padding-bottom: 60px;
 }
 .address-location,
 .logo-item {
