@@ -46,6 +46,7 @@ body {
   margin: 0px;
   padding: 0px;
   list-style: none;
+  padding: 32px 0;
 }
 .nav-link,
 .section-link {
@@ -55,6 +56,9 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+.section {
+  padding: var(--main-padding) 0;
 }
 .section-title {
   font-size: 36px;
@@ -66,9 +70,15 @@ body {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 .buttons {
   list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.buttons > li:not(:last-child) {
+  margin-right: 8px;
 }
 /* ------ Сховати заголовки -------*/
 .visually-hidden {
@@ -82,8 +92,23 @@ body {
   overflow: hidden;
 }
 /* --------- Header ----------*/
+.header .container {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  padding: 32px 0;
+}
+.nav-list {
+  display: flex;
+}
+.nav-list > li:not(:last-child) {
+  margin-right: 50px;
+}
 .header {
   background: var(--main-background-colorbackground-color);
+  display: flex;
 }
 .logo,
 .logfoot {
@@ -96,11 +121,14 @@ body {
   line-height: 1.19;
 }
 .logo {
-  display: block;
-  padding: 24px 0 25px 0;
+  display: flex;
 }
 .logo-part {
   color: var(--primary-text-color);
+}
+.contact-list {
+  display: flex;
+  margin-left: auto;
 }
 .contact-link {
   color: var(--text-color);
@@ -109,6 +137,7 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  margin-right: 50px;
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -156,36 +185,59 @@ body {
 }
 /* ------- Work -------- */
 .work {
-  padding-bottom: var(--main-padding);
-  background: grey;
+  padding-top: 0px;
+}
+.work-list {
+  display: flex;
+}
+.work-list > li:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* -------- Features --------------- */
-.features {
-  padding: var(--main-padding) 0;
-  background: yellow;
+.features-list {
+  display: flex;
+}
+.feature-item:not(:last-child) {
+  margin-right: 30px;
 }
 .feature-text {
   color: var(--text-color);
+  max-width: 270px;
 }
 /* -------- Command ------------------ */
 .command {
-  padding-bottom: var(--main-padding);
-  background: tomato;
 }
 .command-title {
-  padding: 94px 0 50px 0;
 }
 .command-member {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 8px;
 }
 .command-position {
   color: var(--text-color);
   font-size: 16px;
   line-height: 1.19;
+  text-align: center;
 }
+.command-list {
+  display: flex;
+}
+.command-list > li:not(:last-child) {
+  margin-right: 30px;
+}
+.command-item {
+  margin-bottom: 30px;
+  flex-basis: calc((100% - 60px) / 3);
+}
+.command-memeber {
+  margin-bottom: 10px;
+}
+
 /* Buttons */
 .btn {
   color: var(--primary-text-color);
@@ -198,6 +250,14 @@ body {
   background: var(--accent-color);
 }
 /* ------ Examples of projects ---------- */
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-left: -30px; */
+}
+.project-item {
+  /* margin-left: 20px; */
+}
 .project-title {
   font-size: 18px;
   line-height: 2;
@@ -208,17 +268,28 @@ body {
   line-height: 1.88;
   color: var(--text-color);
 }
+/* .projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+.gallery-item {
+  width: calc((100% - 120px) / 4);
+  margin-left: 30px;
+  margin-bottom: 30px;
+} */
 /* ----------- Footer ------------- */
 .footer {
   background: var(--secondary-background-color);
+  padding: 60px 0;
 }
 .logfoot {
   display: block;
-  padding: 60px 0 20px 0;
+  padding-bottom: 20px;
 }
 .address {
   font-style: normal;
-  padding-bottom: 60px;
 }
 .address-location,
 .logo-item {
