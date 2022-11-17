@@ -41,6 +41,7 @@ body {
   width: 1200px;
   padding: 0px 15px;
   margin: 0 auto;
+  outline: 2px solid tomato;
 }
 .list {
   margin: 0px;
@@ -257,10 +258,7 @@ body {
 .projects-list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
-}
-.project-item:not(:last-child) {
-  margin-right: 30px;
+  justify-content: center;
 }
 .project-title {
   font-size: 18px;
@@ -276,6 +274,10 @@ body {
 }
 .project-item {
   width: calc((100% - 90px) / 3);
+  margin-right: 30px;
+}
+.project-item:nth-child(3n) {
+  margin-right: 0;
 }
 /* ----------- Footer ------------- */
 .footer {
