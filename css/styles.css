@@ -25,6 +25,8 @@ ul {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 body {
   color: var(--primary-text-color);
@@ -47,7 +49,6 @@ body {
   margin: 0px;
   padding: 0px;
   list-style: none;
-  padding: 32px 0;
 }
 .nav-link,
 .section-link {
@@ -65,7 +66,7 @@ body {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 .feature-title {
   font-size: 14px;
@@ -73,15 +74,16 @@ body {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-.buttons {
+.buttons-list {
   list-style: none;
   display: flex;
   justify-content: center;
-  border-radius: 4px;
+  padding: 0;
+  margin-bottom: 50px;
 }
-.buttons > li:not(:last-child) {
+/* .buttons-list > li:not(:last-child) {
   margin-right: 8px;
-}
+} */
 /* ------ Сховати заголовки -------*/
 .visually-hidden {
   position: absolute;
@@ -100,7 +102,6 @@ body {
 }
 .nav {
   display: flex;
-  padding: 32px 0;
   align-items: center;
 }
 .nav-list {
@@ -109,9 +110,12 @@ body {
 .nav-list > li:not(:last-child) {
   margin-right: 50px;
 }
+.nav-link {
+  display: block;
+  padding: 32px 0;
+}
 .header {
-  background: var(--main-background-colorbackground-color);
-  display: flex;
+  border-bottom: 1px solid #ececec;
 }
 .logo,
 .logfoot {
@@ -133,6 +137,7 @@ body {
 .contact-list {
   display: flex;
   margin-left: auto;
+  gap: 50px;
 }
 .contact-link {
   color: var(--text-color);
@@ -141,7 +146,8 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  margin-right: 50px;
+  display: block;
+  padding: 32px 0;
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -172,9 +178,10 @@ body {
   display: block;
   margin: 0 auto;
   max-width: 696px;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 .hero-btn {
+  border: none;
   color: var(--secondary-text-color);
   background-color: var(--accent-color);
 
@@ -187,6 +194,7 @@ body {
   cursor: pointer;
   display: block;
   margin: 0 auto;
+  padding: 10px 32px;
 }
 /* ------- Work -------- */
 .work {
@@ -212,16 +220,19 @@ body {
 }
 /* -------- Command ------------------ */
 .command {
+  background-color: #f5f4fa;
 }
 .command-title {
+}
+.user {
+  padding-top: 30px;
+  padding-bottom: 8px;
 }
 .command-member {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 8px;
 }
 .command-position {
   color: var(--text-color);
@@ -238,16 +249,27 @@ body {
 .command-item {
   margin-bottom: 30px;
   flex-basis: calc((100% - 60px) / 3);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
-.command-memeber {
+.command-member {
   margin-bottom: 10px;
 }
 
 /* Buttons */
 .btn {
+  border-radius: 4px;
+  border: none;
+  padding: 6px 22px;
+  margin-right: 8px;
+  margin-bottom: 50px;
+
   color: var(--primary-text-color);
   background: var(--button-background-color);
   cursor: pointer;
+  font-size: 16px;
+  line-height: 1.62;
 }
 .btn:hover,
 .btn:focus {
@@ -259,12 +281,15 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 30px;
+}
+.project {
+  padding: 20px 24px;
 }
 .project-title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin-top: 20px;
   margin-bottom: 4px;
 }
 .project-info {
@@ -273,8 +298,8 @@ body {
   color: var(--text-color);
 }
 .project-item {
-  width: calc((100% - 90px) / 3);
-  margin-right: 30px;
+  width: calc((100% - 60px) / 3);
+  border: 1px solid #eeeeee;
 }
 .project-item:nth-child(3n) {
   margin-right: 0;
@@ -290,6 +315,11 @@ body {
 }
 .address {
   font-style: normal;
+}
+.address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
 }
 .address-location,
 .logo-item {
